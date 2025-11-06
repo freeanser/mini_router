@@ -8,6 +8,10 @@ all: $(TARGET)   # 當你輸入 make 時，會自動執行生成目標（$(TARGE
 $(TARGET): $(SRC)  # 定義編譯規則：當 main.cpp 改變時要重新編譯
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
+# 編譯每個 .cpp 時，記得帶上 -Iinclude
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
 run: $(TARGET)
 	./$(TARGET)
 
