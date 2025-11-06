@@ -35,7 +35,7 @@ void Router::forwardPacket(const string &dstIP) const
     cout << "No route found for " << dstIP << endl;
     return;
   }
-  cout << "➡️  Next hop: " << nextHop << endl;
+  cout << "Next hop: " << nextHop << endl;
 
   string mac;
   if (!arp.resolve(nextHop, mac))
