@@ -1,10 +1,6 @@
 # mini_router
-非常好 👍 — 這樣補充非常專業，也更符合你這個 mini-router 專案的教學性質。
-下面是更新後的 **README（英文）完整版**，在 *Learning Goals* 區段我已明確加上 **L2 / L3 protocol concepts**（並自然融入前文語氣）：
 
----
-
-## 🧭 Mini Router Simulator
+## Mini Router Simulator
 
 A lightweight C++ project that simulates how a simple router forwards packets based on a **Routing Table** and an **ARP Table**.
 This project is designed for learning basic networking and practicing object-oriented programming (OOP) in C++.
