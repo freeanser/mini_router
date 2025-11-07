@@ -9,11 +9,11 @@ using namespace std;
 class ArpTable
 {
 private:
-  unordered_map<string, string> table; // IP -> MAC
+  unordered_map<string, string> table; // IP → MAC
 
 public:
-  void addEntry(const string &ip, const string &mac);
-  bool resolve(const string &ip, string &mac) const;
+  void addEntry(const string &ip, const string &mac); // Add or update an entry
+  bool resolve(const string &ip, string &mac) const;  // Find MAC by IP
 };
 
 #endif

@@ -1,16 +1,12 @@
 // src/Router.cpp
-
 #include "Router.h"
 #include <iostream>
 using namespace std;
 
 Router::Router()
 {
-  // 初始化 Routing Table
   routing.addRoute("10.0.0.2", "192.168.1.1");
   routing.addRoute("10.0.0.3", "192.168.1.2");
-
-  // 初始化 ARP Table
   arp.addEntry("192.168.1.1", "AA:BB:CC:DD:EE:01");
   arp.addEntry("192.168.1.2", "AA:BB:CC:DD:EE:02");
 }
@@ -35,6 +31,7 @@ void Router::forwardPacket(const string &dstIP) const
     cout << "No route found for " << dstIP << endl;
     return;
   }
+
   cout << "->  Next hop: " << nextHop << endl;
 
   string mac;
